@@ -1,7 +1,10 @@
-#include "../include/Utilidades.h"
-#include "../include/DicPalabra.h"
-using namespace std;
+#include "Utilidades.h"
 
+using namespace std;
+//Todas las funciones para normalizar y trabajar con el diccionario
+
+/*Dada una palabra, la devuelve normalizada para poder trabajarla*/
+//Nivel de uso: mucho -> eficiencia máxima requerida
 string convertirPalabraMayuscula(string palabra) {
     string palabraNormalizada;
 
@@ -41,20 +44,22 @@ string convertirPalabraMayuscula(string palabra) {
 
     return palabraNormalizada;
 }
-
-void insertar(DicPalabras d){
+//Dado un diccionario le inserta las palabras de la entrada que no tenga ya y lo devuelve modificado
+DicPalabras insertar(DicPalabras d){
     int palabras_anadidas=0;
     string palabra;
     while (cin >> palabra && convertirPalabraMayuscula(palabra) != "</INSERTAR>"){
         if (!d.buscar(convertirPalabraMayuscula(palabra))){
             d.insertar(convertirPalabraMayuscula(palabra));
-            cout << convertirPalabraMayuscula(palabra) << endl;
+
             palabras_anadidas++;
         }
     }
     cout << "Insertando: " << palabras_anadidas << " palabras" << endl;
     cout << "Total diccionario: " << d.GetNumElem() << " palabras" << endl;
+    return d;
 }
+//Imprime si una palabra se encuentra o no en el diccionario dado
 void buscar(DicPalabras d){
     string palabra;
     cin >> palabra;
@@ -66,13 +71,14 @@ void buscar(DicPalabras d){
     }
 
 }
-
-void vaciar(DicPalabras d){
+//Dado un diccionario lo devuelve vaciado
+DicPalabras vaciar(DicPalabras d){
     d.vaciar();
     cout << "Vaciando"<< endl;
     cout << "Total diccionario: "<< d.GetNumElem() << " palabras"<<endl;
+    return d;
 }
-
+//Hasta el siguiente comentario son funciones NO IMPLEMENTADAS
 void partidas(){
     string palabra, palabras;
     while(cin >> palabra && convertirPalabraMayuscula(palabra) != "</PARTIDAS>"){
@@ -135,36 +141,48 @@ void alargapalabras(){
     cout << "Alarga: "<< palabra << endl;
     cout << "No implementado" << endl;
 }
+//NUCLEO y BASE de Wild Word Games --> contiene el diccionario y es el nexo de todos los comandos
+//Nivel de uso: mucho -> eficiencia máxima requerida
+void InterpreteComandos (){
+    string palabra;
+    DicPalabras d;
+    while (cin >> palabra && convertirPalabraMayuscula(palabra) != "<EXIT>"){
+        string comando_convertido= convertirPalabraMayuscula(palabra);
+        if(comando_convertido=="<INSERTAR>"){
+            d = insertar(d);
+        }
+        else if(comando_convertido=="<VACIAR>"){
+            d = vaciar(d);
+        }
+        else if(comando_convertido=="<BUSCAR>"){
+            buscar(d);
+        }
+        else if(comando_convertido=="<PARTIDAS>"){
+            partidas();
+        }
+        else if(comando_convertido=="<ALOCADO>"){
+            alocado();
+        }
+        else if(comando_convertido=="<CESAR>"){
+            cesar();
+        }
+        else if(comando_convertido=="<JUANAGRA>"){
+            juanagra();
+        }
+        else if(comando_convertido=="<SACO>"){
+            saco();
+        }
+        else if(comando_convertido=="<CONSOME>"){
+            consome();
+        }
+        else if(comando_convertido=="<ALARGA>"){
+            alargapalabras();
+        }
+    }
+    if (convertirPalabraMayuscula(palabra) == "<EXIT>"){
+        cout << "Saliendo..." << endl;
+    }
 
-void InterpreteComandos (string comando,DicPalabras d){
-    if(convertirPalabraMayuscula(comando)=="<INSERTAR>"){
-        insertar(d);
-    }
-    else if(convertirPalabraMayuscula(comando)=="<VACIAR>"){
-        vaciar(d);
-    }
-    else if(convertirPalabraMayuscula(comando)=="<BUSCAR>"){
-        buscar(d);
-    }
-    else if(convertirPalabraMayuscula(comando)=="<PARTIDAS>"){
-        partidas();
-    }
-    else if(convertirPalabraMayuscula(comando)=="<ALOCADO>"){
-        alocado();
-    }
-    else if(convertirPalabraMayuscula(comando)=="<CESAR>"){
-        cesar();
-    }
-    else if(convertirPalabraMayuscula(comando)=="<JUANAGRA>"){
-        juanagra();
-    }
-    else if(convertirPalabraMayuscula(comando)=="<SACO>"){
-        saco();
-    }
-    else if(convertirPalabraMayuscula(comando)=="<CONSOME>"){
-        consome();
-    }
-    else if(convertirPalabraMayuscula(comando)=="<ALARGA>"){
-        alargapalabras();
-    }
+
+
 }
