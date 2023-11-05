@@ -2,13 +2,18 @@
 #define UTILIDADES_H
 #include <string>
 #include <iostream>
+#include "DicPalabra.h"
 using namespace std;
 
 string convertirPalabraMayuscula(string palabra);
 
-void InterpreteComandos (string comando);
+void InterpreteComandos (string comando, DicPalabras d);
 
-void buscar ();
+void buscar(DicPalabras d);
+
+void insertar(DicPalabras d);
+
+void vaciar(DicPalabras d);
 
 void partidas();
 
