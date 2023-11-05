@@ -14,9 +14,9 @@ public:
     DicPalabras(); //Constructor por defecto
     virtual ~DicPalabras(); //Destructor virtual
     void vaciar();
-    void insertar (string palabra);
+    void insertar(string palabra);
     bool buscar (string palabra);
-    int GetNumElem (void) {return contador;}
+    int GetNumElem() {return contador;}
 
 protected:
 
@@ -26,23 +26,10 @@ private: //Solo accesible por la clase
     int contador; //Es el contador M del metodo void insertar()
 };
 
-void DicPalabras::vaciar() {
-    this->contador=0;
-    this->lista.clear();
-}
 
 
-bool DicPalabras::buscar(string palabra) {
-    for (string elemento : lista){
-        if (palabra == elemento) return true;
-    }
-    return false;
-}
-void DicPalabras::insertar(string palabra) {
-    if (buscar(palabra)) return;
-    lista.push_back(palabra);
-    contador++;
-}
+
+
 
 
 
