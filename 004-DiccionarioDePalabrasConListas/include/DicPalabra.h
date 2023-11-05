@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+//Atributos y métodos del diccionario
 class DicPalabras
 {
 public:
