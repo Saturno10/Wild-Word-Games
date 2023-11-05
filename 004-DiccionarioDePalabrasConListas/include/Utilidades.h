@@ -4,16 +4,16 @@
 #include <iostream>
 #include "DicPalabra.h"
 using namespace std;
-
+//Todas las funciones con las que se tiene que trabajar con el diccionario
 string convertirPalabraMayuscula(string palabra);
 
-void InterpreteComandos (string comando, DicPalabras d);
+void InterpreteComandos();
 
 void buscar(DicPalabras d);
 
-void insertar(DicPalabras d);
+DicPalabras insertar(DicPalabras d);
 
-void vaciar(DicPalabras d);
+DicPalabras vaciar(DicPalabras d);
 
 void partidas();
 
@@ -29,5 +29,5 @@ void consome();
 
 void alargapalabras();
 
-void InterpreteComandos (string comando);
+
 #endif // UTILIDADES_H
