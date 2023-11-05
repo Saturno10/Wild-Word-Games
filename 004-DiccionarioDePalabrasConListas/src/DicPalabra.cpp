@@ -1,10 +1,10 @@
-#include "DicPalabras.h"
-
+#include "../include/DicPalabra.h"
 
 
 
 DicPalabras::DicPalabras()
 {
+    list<string> lista; //Almacena las palabras del diccionario
     contador = 0;
 }
 
@@ -16,14 +16,15 @@ DicPalabras::~DicPalabras()
 void DicPalabras::vaciar(){
     //Eliminará todas las palabras del diccionario,
     //y se aplica con el comando <vaciar>
-    lista.clear();
-    contador = 0;
-    cout << "Vaciando"<< endl;
-    cout << "Total diccionario: "<< contador << " palabras"<<endl;
+
+    this->contador=0;
+    this->lista.clear();
+
+
 
 }
 
-void DicPalabras::insertar(string palabra){
+void DicPalabras::insertar(string palabra) {
     //Se insertará la palabra de forma ordenada en la lista (conjunto)(si no existe ya).
     // El orden será el de la comparación entre string de C++. Las palabras
     //insertadas deben estar normalizadas. Se usará dentro del comando <insertar>.
@@ -31,54 +32,23 @@ void DicPalabras::insertar(string palabra){
     //N palabras que aparecen dentro del comando (aunque esten repetidas)
     //M palabras palabras en el diccionario (No repetidas)
 
-    string palabra;
-    int contadorM=0;
-    while(cin >> palabra && convertirPalabraMayuscula(palabra) != "</INSERTAR>"){
-        string palabraNormalizada = convertirPalabraMayuscula(palabra);
+    this->lista.push_back(palabra);
 
-        /* PRIMER MODELO DE ACCESO SECUENCIAL  (Primera idea)
+    this->contador++;
 
-        bool palabraRepetida = false;
-         for(auto it=lista.begin(); it != lista.end(); it++)){
-             if (*it == palabraNormalizada){
-              palabraRepetida = true;
-              break;
-             }
-         }
-         if(!palabraRepetida){
-            lista.push_back(palabraNormalizada);
-            contadorM++;
-          }*/
-
-        it = lista.begin();
-        while(it != lista.end() && *it <palabraNormalizada)
-            it++;
-
-        if(it == lista.end() || *it != palabra)
-            lista.insert(it, cadena);
-
-
-
-
-
-    }
-    contador+=contadorM;
-    cout << "Insertando: " << contadorM <<" palabras" << endl;
-    cout << "Total diccionario: " << contador <<" palabras" << endl;
-    //Usar metodo devolver tamaño
-}
-
-void DicPalabras::devolverTamaño(){
-    //Devolverá el tamaño actual del diccionario (el número de palabras
-    //que contiene). Se usa al acabar el comando <insertar>.
 
 }
 
-bool DicPalabras:: consultar(string palabra){
+bool DicPalabras::buscar(string palabra) {
     //Busca una palabra dentro del diccionario, indicando si está o no.
     //La palabra debe estar normalizada. Se usa en el comando <buscar>.
+    for (list<string>::iterator it = lista.begin(); it != lista.end(); ++it ){
 
-    cout << "Buscando: " << palabra <<"-> Encontrada" << endl;
-    cout << "Buscando: " << palabra <<"-> No encontrada" << endl;
+        if (*it == palabra) {
 
+            return true;
+        }
+    }
+
+    return false;
 }
