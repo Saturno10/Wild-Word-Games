@@ -1,5 +1,5 @@
 #include "../include/Utilidades.h"
-
+#include "../include/DicPalabra.h"
 using namespace std;
 
 string convertirPalabraMayuscula(string palabra) {
@@ -42,12 +42,35 @@ string convertirPalabraMayuscula(string palabra) {
     return palabraNormalizada;
 }
 
-void buscar (){
+void insertar(DicPalabras d){
+    int palabras_anadidas=0;
+    string palabra;
+    while (cin >> palabra && convertirPalabraMayuscula(palabra) != "</INSERTAR>"){
+        if (!d.buscar(convertirPalabraMayuscula(palabra))){
+            d.insertar(convertirPalabraMayuscula(palabra));
+            cout << convertirPalabraMayuscula(palabra) << endl;
+            palabras_anadidas++;
+        }
+    }
+    cout << "Insertando: " << palabras_anadidas << " palabras" << endl;
+    cout << "Total diccionario: " << d.GetNumElem() << " palabras" << endl;
+}
+void buscar(DicPalabras d){
     string palabra;
     cin >> palabra;
-    palabra=convertirPalabraMayuscula(palabra);
 
-    cout << "Buscando: "<< palabra << " -> No encontrada"<<endl;
+    if (d.buscar(convertirPalabraMayuscula(palabra))){
+        cout << "Buscando: " << convertirPalabraMayuscula(palabra) << "-> Encontrada" << endl;
+    }else{
+        cout << "Buscando: " << convertirPalabraMayuscula(palabra) << "-> No encontrada" << endl;
+    }
+
+}
+
+void vaciar(DicPalabras d){
+    d.vaciar();
+    cout << "Vaciando"<< endl;
+    cout << "Total diccionario: "<< d.GetNumElem() << " palabras"<<endl;
 }
 
 void partidas(){
@@ -113,15 +136,15 @@ void alargapalabras(){
     cout << "No implementado" << endl;
 }
 
-void InterpreteComandos (string comando){
+void InterpreteComandos (string comando,DicPalabras d){
     if(convertirPalabraMayuscula(comando)=="<INSERTAR>"){
-        insertar();
+        insertar(d);
     }
     else if(convertirPalabraMayuscula(comando)=="<VACIAR>"){
-        vaciar();
+        vaciar(d);
     }
     else if(convertirPalabraMayuscula(comando)=="<BUSCAR>"){
-        buscar();
+        buscar(d);
     }
     else if(convertirPalabraMayuscula(comando)=="<PARTIDAS>"){
         partidas();
