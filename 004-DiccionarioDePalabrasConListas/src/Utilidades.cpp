@@ -46,15 +46,14 @@ string convertirPalabraMayuscula(string palabra) {
 }
 //Dado un diccionario le inserta las palabras de la entrada que no tenga ya y lo devuelve modificado
 DicPalabras insertar(DicPalabras d){
-    int palabras_anadidas=0;
+
+    int tamano_temp = d.GetNumElem();
     string palabra;
     while (cin >> palabra && convertirPalabraMayuscula(palabra) != "</INSERTAR>"){
-        if (!d.buscar(convertirPalabraMayuscula(palabra))){
-            d.insertar(convertirPalabraMayuscula(palabra));
+        d.insertar(convertirPalabraMayuscula(palabra));
 
-            palabras_anadidas++;
-        }
     }
+    int palabras_anadidas=d.GetNumElem()-tamano_temp;
     cout << "Insertando: " << palabras_anadidas << " palabras" << endl;
     cout << "Total diccionario: " << d.GetNumElem() << " palabras" << endl;
     return d;
@@ -63,11 +62,11 @@ DicPalabras insertar(DicPalabras d){
 void buscar(DicPalabras d){
     string palabra;
     cin >> palabra;
-
-    if (d.buscar(convertirPalabraMayuscula(palabra))){
-        cout << "Buscando: " << convertirPalabraMayuscula(palabra) << "-> Encontrada" << endl;
+    string palabra_norm = convertirPalabraMayuscula(palabra);
+    if (d.buscar(palabra_norm)){
+        cout << "Buscando: " << palabra_norm << "-> Encontrada" << endl;
     }else{
-        cout << "Buscando: " << convertirPalabraMayuscula(palabra) << "-> No encontrada" << endl;
+        cout << "Buscando: " << palabra_norm << "-> No encontrada" << endl;
     }
 
 }
