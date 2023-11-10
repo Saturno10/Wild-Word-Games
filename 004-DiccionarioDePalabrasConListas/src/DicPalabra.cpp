@@ -1,4 +1,4 @@
-#include "DicPalabra.h"
+#include "../include/DicPalabra.h"
 
 
 //Constructor del diccionario
@@ -32,26 +32,16 @@ void DicPalabras::insertar(string palabra) {
         lista.insert(it, palabra);
         contador++;
     }
-    /*this->lista.push_back(palabra);
 
-    this->contador++;*/
 
 
 }
 //Orden de búsqueda de palabras en la lista de un diccionario, la palabra se da normalizada
 bool DicPalabras::buscar(string palabra) {
 
-    /*for (list<string>::iterator it = this->lista.begin(); it != this->lista.end(); ++it ){
 
-        if (*it == palabra) {
 
-            return true;
-        }
-    }
-
-    return false;*/
-
-    list<string>::iterator  it = this->lista.begin();
+    list<string>::iterator  it = lista.begin();
     while (it!=this->lista.end() && *it < palabra) it++;
     if(it==lista.end() || *it!=palabra) return false;
     return true;
