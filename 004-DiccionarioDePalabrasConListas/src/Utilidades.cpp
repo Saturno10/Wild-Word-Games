@@ -1,4 +1,4 @@
-#include "Utilidades.h"
+#include "../include/Utilidades.h"
 
 using namespace std;
 //Todas las funciones para normalizar y trabajar con el diccionario
@@ -45,7 +45,7 @@ string convertirPalabraMayuscula(string palabra) {
     return palabraNormalizada;
 }
 //Dado un diccionario le inserta las palabras de la entrada que no tenga ya y lo devuelve modificado
-DicPalabras insertar(DicPalabras d){
+void insertar(DicPalabras &d){
 
     int tamano_temp = d.GetNumElem();
     string palabra;
@@ -56,26 +56,26 @@ DicPalabras insertar(DicPalabras d){
     int palabras_anadidas=d.GetNumElem()-tamano_temp;
     cout << "Insertando: " << palabras_anadidas << " palabras" << endl;
     cout << "Total diccionario: " << d.GetNumElem() << " palabras" << endl;
-    return d;
+
 }
 //Imprime si una palabra se encuentra o no en el diccionario dado
-void buscar(DicPalabras d){
+void buscar(DicPalabras &d){
     string palabra;
     cin >> palabra;
     string palabra_norm = convertirPalabraMayuscula(palabra);
     if (d.buscar(palabra_norm)){
-        cout << "Buscando: " << palabra_norm << "-> Encontrada" << endl;
+        cout << "Buscando: " << palabra_norm << " -> Encontrada" << endl;
     }else{
-        cout << "Buscando: " << palabra_norm << "-> No encontrada" << endl;
+        cout << "Buscando: " << palabra_norm << " -> No encontrada" << endl;
     }
 
 }
 //Dado un diccionario lo devuelve vaciado
-DicPalabras vaciar(DicPalabras d){
+void vaciar(DicPalabras &d){
     d.vaciar();
     cout << "Vaciando"<< endl;
     cout << "Total diccionario: "<< d.GetNumElem() << " palabras"<<endl;
-    return d;
+
 }
 //Hasta el siguiente comentario son funciones NO IMPLEMENTADAS
 void partidas(){
@@ -142,16 +142,16 @@ void alargapalabras(){
 }
 //NUCLEO y BASE de Wild Word Games --> contiene el diccionario y es el nexo de todos los comandos
 //Nivel de uso: mucho -> eficiencia máxima requerida
-void InterpreteComandos (){
+void InterpreteComandos (DicPalabras &d){
     string palabra;
-    DicPalabras d;
+
     while (cin >> palabra && convertirPalabraMayuscula(palabra) != "<EXIT>"){
         string comando_convertido= convertirPalabraMayuscula(palabra);
         if(comando_convertido=="<INSERTAR>"){
-            d = insertar(d);
+            insertar(d);
         }
         else if(comando_convertido=="<VACIAR>"){
-            d = vaciar(d);
+            vaciar(d);
         }
         else if(comando_convertido=="<BUSCAR>"){
             buscar(d);
