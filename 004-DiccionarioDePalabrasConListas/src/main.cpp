@@ -1,12 +1,12 @@
-#include "Utilidades.h"
+#include "../include/Utilidades.h"
+
 using namespace std;
 
-
-
+DicPalabras d;
 
 int main(){
 
-    InterpreteComandos();
+    InterpreteComandos(d);
 
     return 0;
 }
