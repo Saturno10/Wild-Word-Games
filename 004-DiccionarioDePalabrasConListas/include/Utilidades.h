@@ -7,13 +7,13 @@ using namespace std;
 //Todas las funciones con las que se tiene que trabajar con el diccionario
 string convertirPalabraMayuscula(string palabra);
 
-void InterpreteComandos();
+void InterpreteComandos(DicPalabras &d);
 
-void buscar(DicPalabras d);
+void buscar(DicPalabras &d);
 
-DicPalabras insertar(DicPalabras d);
+void insertar(DicPalabras &d);
 
-DicPalabras vaciar(DicPalabras d);
+void vaciar(DicPalabras &d);
 
 void partidas();
 
