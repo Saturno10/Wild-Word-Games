@@ -99,7 +99,7 @@ bool TablaHash::consultar (string palabra){
 
 }
 void TablaHash::vaciar (){
-    for (unsigned int i = 0; i < TAMANO; i++) {
+    for (unsigned int i = 0; i < TAMANO_TABLA; i++) {
         this->T[i].clear();
     }
     nElem = 0;
