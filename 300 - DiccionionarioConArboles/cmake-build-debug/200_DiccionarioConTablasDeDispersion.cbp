@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="200_DiccionarioConTablasDeDispersion"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="200_DiccionarioConTablasDeDispersion">
+				<Option output="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug/200_DiccionarioConTablasDeDispersion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 200_DiccionarioConTablasDeDispersion"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="200_DiccionarioConTablasDeDispersion/fast">
+				<Option output="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug/200_DiccionarioConTablasDeDispersion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 200_DiccionarioConTablasDeDispersion/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/maria/Escritorio/Segundo/Practicas/AED/Practica\ 2/Wild-Word-Games-main/300\ -\ DiccionionarioConArboles/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include/ArbolTrie.h">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include/DicPalabra.h">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include/NodoTrie.h">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include/TablaHash.h">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/include/Utilidades.h">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/src/ArbolTrie.cpp">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/src/DicPalabra.cpp">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/src/NodoTrie.cpp">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/src/TablaHash.cpp">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/src/Utilidades.cpp">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/src/main.cpp">
+			<Option target="200_DiccionarioConTablasDeDispersion"/>
+		</Unit>
+		<Unit filename="/home/maria/Escritorio/Segundo/Practicas/AED/Practica 2/Wild-Word-Games-main/300 - DiccionionarioConArboles/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
